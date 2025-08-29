@@ -1,1 +1,591 @@
-<p> Hello World</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1001267125 ONTARIO INC. – Steel Manufacturing & Supply</title>
+    <meta name="description" content="Professional steel manufacturing and supply solutions in Scarborough, Ontario. Founded by Salman Zahoor in 2025, offering steel sourcing, cutting, processing, and logistics services.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="1001267125 ONTARIO INC. – Steel Manufacturing & Supply">
+    <meta property="og:description" content="Professional steel manufacturing and supply solutions in Scarborough, Ontario. Founded by Salman Zahoor in 2025.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1565883501949-98c81973dd2c?w=1200&h=630&fit=crop&crop=center&auto=format&q=80">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="1001267125 ONTARIO INC. – Steel Manufacturing & Supply">
+    <meta name="twitter:description" content="Professional steel manufacturing and supply solutions in Scarborough, Ontario.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1565883501949-98c81973dd2c?w=1200&h=630&fit=crop&crop=center&auto=format&q=80">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <style>
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+            }
+            
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+            }
+            
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+            
+            @keyframes gradient-shift {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+            
+            .animate-gradient {
+                animation: gradient-shift 8s ease infinite;
+                background-size: 200% 200%;
+            }
+            
+            .glass-nav {
+                backdrop-filter: blur(10px);
+                background: rgba(255, 255, 255, 0.1);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+            
+            .parallax-hero {
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            @media (prefers-reduced-motion: reduce) {
+                .animate-float,
+                .animate-gradient,
+                .parallax-hero {
+                    animation: none;
+                }
+                .parallax-hero {
+                    background-attachment: scroll;
+                }
+            }
+        }
+    </style>
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "1001267125 ONTARIO INC.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "829 Birchmount Road, Unit 105",
+            "addressLocality": "Scarborough",
+            "addressRegion": "Ontario",
+            "postalCode": "M1K 1R9",
+            "addressCountry": "Canada"
+        },
+        "email": "info@example.com",
+        "sameAs": []
+    }
+    </script>
+</head>
+<body class="bg-slate-50 font-sans">
+    <!-- Skip to content -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">Skip to content</a>
+    
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-40 transition-all duration-300" id="navbar">
+        <nav class="container mx-auto px-6 py-4" role="navigation" aria-label="Main navigation">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-bold text-slate-800">
+                    1001267125 ONTARIO INC.
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-slate-700 hover:text-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-2 py-1">Services</a>
+                    <a href="#about" class="text-slate-700 hover:text-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-2 py-1">About</a>
+                    <a href="#contact" class="text-slate-700 hover:text-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-2 py-1">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center parallax-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1565883501949-98c81973dd2c?w=1600&q=80&auto=format');" aria-label="Hero section">
+            <div class="container mx-auto px-6 text-center text-white relative z-10">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-shadow animate-float" data-aos="fade-up">
+                    1001267125 ONTARIO INC.
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-shadow max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Steel Manufacturing & Supply Solutions
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" data-aos="fade-up" data-aos-delay="400">
+                    <a href="mailto:info@example.com?subject=Quote%20Request&body=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20steel%20products.%20Please%20contact%20me%20at%20your%20earliest%20convenience." 
+                       class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 min-w-48">
+                        Get a Quote
+                    </a>
+                    <a href="#contact" 
+                       class="border-2 border-white text-white hover:bg-white hover:text-slate-800 px-8 py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 min-w-48">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" data-aos="fade-in" data-aos-delay="800">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Wave Separator -->
+        <div class="relative">
+            <svg class="w-full h-16 text-slate-50" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="currentColor">
+                <path d="M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z"/>
+            </svg>
+        </div>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-white" aria-labelledby="services-heading">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 id="services-heading" class="text-4xl md:text-5xl font-bold text-slate-800 mb-4" data-aos="fade-up">
+                        Our Services
+                    </h2>
+                    <p class="text-xl text-slate-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                        Comprehensive steel manufacturing and supply solutions tailored to your needs
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Cards -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-300 border border-slate-100 focus-within:ring-2 focus-within:ring-blue-500" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-3">Steel Supply & Sourcing</h3>
+                        <p class="text-slate-600">Reliable sourcing and supply of high-quality steel products from trusted suppliers across North America.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-300 border border-slate-100 focus-within:ring-2 focus-within:ring-blue-500" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-3">Cutting & Processing</h3>
+                        <p class="text-slate-600">Precision cutting and processing services to meet exact specifications for your projects.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-300 border border-slate-100 focus-within:ring-2 focus-within:ring-blue-500" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-3">Fabrication Support</h3>
+                        <p class="text-slate-600">Expert consultation and support for steel fabrication projects of all sizes and complexity.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-300 border border-slate-100 focus-within:ring-2 focus-within:ring-blue-500" data-aos="fade-up" data-aos-delay="400">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-3">Logistics & Delivery</h3>
+                        <p class="text-slate-600">Efficient logistics solutions ensuring timely delivery of steel products across Ontario and beyond.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-300 border border-slate-100 focus-within:ring-2 focus-within:ring-blue-500" data-aos="fade-up" data-aos-delay="500">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-3">Project Consultation</h3>
+                        <p class="text-slate-600">Professional guidance and consultation for steel-related projects from planning to completion.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-300 border border-slate-100 focus-within:ring-2 focus-within:ring-blue-500" data-aos="fade-up" data-aos-delay="600">
+                        <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-3">Quality & Standards</h3>
+                        <p class="text-slate-600">Commitment to industry standards and quality assurance for all steel products and services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gradient-to-br from-slate-100 to-slate-200" aria-labelledby="about-heading">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 id="about-heading" class="text-4xl md:text-5xl font-bold text-slate-800 mb-8" data-aos="fade-up">
+                        About Our Company
+                    </h2>
+                    <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-lg text-slate-700 leading-relaxed mb-6">
+                            <strong class="text-slate-800">1001267125 ONTARIO INC.</strong> is a steel manufacturing and supply corporation founded by <strong class="text-slate-800">Salman Zahoor</strong> and incorporated on <strong class="text-slate-800">June 12, 2025</strong>. Based in <strong class="text-slate-800">Scarborough, Ontario</strong>, we are committed to providing reliable steel solutions to businesses across Canada.
+                        </p>
+                        <p class="text-lg text-slate-700 leading-relaxed">
+                            Our focus is on delivering quality steel products and services while maintaining the highest standards of professionalism and customer service in the industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Facts Section -->
+        <section class="py-20 bg-white" aria-labelledby="industry-heading">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 id="industry-heading" class="text-4xl md:text-5xl font-bold text-slate-800 mb-8" data-aos="fade-up">
+                        Canadian Steel Industry
+                    </h2>
+                    <div class="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 md:p-12" data-aos="fade-up" data-aos-delay="200">
+                        <div class="grid md:grid-cols-2 gap-8 text-left">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
+                                <div>
+                                    <p class="text-lg text-slate-700 leading-relaxed">
+                                        <span class="font-semibold">Canadian steel producers export over 50% of their annual production</span>, with more than 90% of exports going to the United States market. 
+                                        <a href="https://www.canada.ca/en/department-finance/news/2025/07/support-for-the-canadian-steel-sector.html" 
+                                           class="text-blue-600 hover:text-blue-800 text-sm underline" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer"
+                                           aria-label="Source: Government of Canada (opens in new tab)">
+                                            [Source]
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mt-3 flex-shrink-0"></div>
+                                <div>
+                                    <p class="text-lg text-slate-700 leading-relaxed">
+                                        <span class="font-semibold">Steel is a cornerstone of Canada's national economy</span>, critical to building infrastructure and supporting advanced manufacturing across the country.
+                                        <a href="https://www.canada.ca/en/department-finance/news/2025/07/support-for-the-canadian-steel-sector.html" 
+                                           class="text-blue-600 hover:text-blue-800 text-sm underline" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer"
+                                           aria-label="Source: Government of Canada (opens in new tab)">
+                                            [Source]
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gradient-to-br from-slate-800 to-slate-900 text-white" aria-labelledby="contact-heading">
+            <div class="container mx-auto px-6">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 id="contact-heading" class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up">
+                            Get In Touch
+                        </h2>
+                        <p class="text-xl text-slate-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                            Ready to discuss your steel manufacturing needs? Contact us today for professional consultation.
+                        </p>
+                    </div>
+                    
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                        <!-- Contact Info -->
+                        <div data-aos="fade-right">
+                            <div class="space-y-8">
+                                <!-- Address -->
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold mb-2">Registered Office</h3>
+                                        <address class="text-slate-300 not-italic">
+                                            829 Birchmount Road, Unit 105<br>
+                                            Scarborough, Ontario<br>
+                                            M1K 1R9, Canada
+                                        </address>
+                                        <a href="https://www.google.com/maps/search/829+Birchmount+Road,+Unit+105,+Scarborough,+Ontario+M1K+1R9" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer" 
+                                           class="inline-flex items-center mt-2 text-blue-400 hover:text-blue-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 rounded">
+                                            View on Maps
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <!-- Email -->
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold mb-2">Email</h3>
+                                        <a href="mailto:info@example.com" 
+                                           class="text-blue-400 hover:text-blue-300 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 rounded">
+                                            info@example.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Map Image -->
+                            <div class="mt-12">
+                                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=300&fit=crop&crop=center&auto=format&q=80" 
+                                     alt="Industrial cityscape representing our Scarborough location" 
+                                     class="rounded-xl w-full shadow-lg"
+                                     loading="lazy">
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Form -->
+                        <div data-aos="fade-left">
+                            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                                <h3 class="text-2xl font-bold mb-6">Send us a message</h3>
+                                <form class="space-y-6" onsubmit="handleFormSubmit(event)">
+                                    <div>
+                                        <label for="name" class="block text-sm font-medium text-white mb-2">Name</label>
+                                        <input type="text" 
+                                               id="name" 
+                                               name="name" 
+                                               required 
+                                               class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                               placeholder="Your full name">
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-white mb-2">Email</label>
+                                        <input type="email" 
+                                               id="email" 
+                                               name="email" 
+                                               required 
+                                               class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                                               placeholder="your.email@example.com">
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="subject" class="block text-sm font-medium text-white mb-2">Subject</label>
+                                        <select id="subject" 
+                                                name="subject" 
+                                                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+                                            <option value="General Inquiry" class="text-slate-800">General Inquiry</option>
+                                            <option value="Quote Request" class="text-slate-800">Quote Request</option>
+                                            <option value="Project Consultation" class="text-slate-800">Project Consultation</option>
+                                            <option value="Partnership Opportunity" class="text-slate-800">Partnership Opportunity</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="message" class="block text-sm font-medium text-white mb-2">Message</label>
+                                        <textarea id="message" 
+                                                  name="message" 
+                                                  rows="5" 
+                                                  required 
+                                                  class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                                                  placeholder="Tell us about your steel requirements..."></textarea>
+                                    </div>
+                                    
+                                    <button type="submit" 
+                                            class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 animate-gradient">
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t-4 border-gradient-to-r from-blue-500 to-green-500 py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-bold text-white mb-2">1001267125 ONTARIO INC.</h3>
+                    <p class="text-slate-400">Founded by Salman Zahoor</p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8">
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1">Privacy Policy</a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1">Terms of Service</a>
+                </div>
+                
+                <div class="border-t border-slate-700 pt-6">
+                    <p class="text-slate-500">© 2025 1001267125 ONTARIO INC. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 100
+        });
+
+        // Glass navbar effect
+        const navbar = document.getElementById('navbar');
+        let lastScrollY = window.scrollY;
+
+        function updateNavbar() {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > 100) {
+                navbar.classList.add('glass-nav', 'shadow-lg');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('glass-nav', 'shadow-lg');
+                navbar.classList.add('bg-transparent');
+            }
+            
+            lastScrollY = currentScrollY;
+        }
+
+        // Throttled scroll handler
+        let ticking = false;
+        function handleScroll() {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    updateNavbar();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+            
+            const emailBody = `Hello,
+
+Name: ${name}
+Email: ${email}
+Subject: ${subject}
+
+Message:
+${message}
+
+Best regards,
+${name}`;
+            
+            const mailtoLink = `mailto:info@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            window.location.href = mailtoLink;
+        }
+
+        // Add intersection observer for enhanced animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-pulse');
+                    setTimeout(() => {
+                        entry.target.classList.remove('animate-pulse');
+                    }, 1000);
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards for enhanced interaction
+        document.querySelectorAll('[data-aos]').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Enhanced button interactions
+        document.querySelectorAll('button, .btn, a[class*="bg-"]').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    this.style.transform = 'translateY(-2px) scale(1.02)';
+                }
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = '';
+            });
+        });
+
+        // Parallax effect for hero (respect reduced motion preference)
+        function handleParallax() {
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * -0.5;
+                const hero = document.querySelector('.parallax-hero');
+                if (hero) {
+                    hero.style.backgroundPosition = `center ${rate}px`;
+                }
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    handleParallax();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+    </script>
+</body>
+</html>
