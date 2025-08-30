@@ -49,6 +49,7 @@
                 background-size: 200% 200%;
             }
             
+            /* Keep for potential future use, but not applied now */
             .glass-nav {
                 backdrop-filter: blur(10px);
                 background: rgba(255, 255, 255, 0.1);
@@ -141,11 +142,11 @@
     <!-- Skip to content -->
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-sky-600 text-white px-4 py-2 rounded z-50">Skip to content</a>
     
-    <!-- Navigation - Semi-transparent with hamburger menu -->
-    <header class="fixed top-0 w-full z-40 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm" id="navbar">
+    <!-- Navigation - SOLID white with tighter padding -->
+    <header class="fixed top-0 w-full z-40 bg-white border-b border-slate-200 shadow-sm" id="navbar">
         <nav class="container mx-auto px-6" role="navigation" aria-label="Main navigation">
-            <div class="flex items-center justify-between py-2">
-                <!-- LOGO -->
+            <div class="flex items-center justify-between md:py-2"><!-- decreased padding here -->
+                <!-- LOGO (unchanged size) -->
                 <a href="#" class="flex items-center gap-3" aria-label="1001267125 Ontario Inc. home">
                     <img src="https://raw.githubusercontent.com/codewithPrasiddha/1001267125-ONTARIO-INC./main/assets/logo.png" alt="1001267125 Ontario Inc. logo" class="h-20 w-auto" loading="eager" decoding="async">
                     <span class="sr-only">1001267125 ONTARIO INC.</span>
@@ -162,7 +163,7 @@
                 <button class="md:hidden hamburger flex flex-col space-y-1.5 p-2 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded" 
                         id="mobile-menu-button" 
                         aria-label="Toggle mobile menu" 
-                        aria-expanded="false">
+                        aria-expanded="false" aria-controls="mobile-menu">
                     <span class="hamburger-line w-6 h-0.5 bg-slate-700"></span>
                     <span class="hamburger-line w-6 h-0.5 bg-slate-700"></span>
                     <span class="hamburger-line w-6 h-0.5 bg-slate-700"></span>
@@ -170,15 +171,24 @@
             </div>
         </nav>
         
-        <!-- Mobile Menu -->
-        <div class="md:hidden mobile-menu fixed top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-md z-30" id="mobile-menu">
+        <!-- Mobile Menu (slide-in) -->
+        <div class="md:hidden mobile-menu fixed top-0 left-0 w-full h-screen bg-white z-30" id="mobile-menu" aria-hidden="true">
+            <!-- CLOSE BUTTON (new) -->
+            <button id="mobile-close-button" aria-label="Close menu" class="absolute top-4 right-4 p-3 rounded-full border border-slate-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-500">
+                <!-- X icon -->
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            
             <div class="flex flex-col items-center justify-center h-full space-y-8">
-                <a href="#services" class="text-2xl text-slate-700 hover:text-sky-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded px-4 py-2 mobile-menu-link">Services</a>
-                <a href="#about" class="text-2xl text-slate-700 hover:text-sky-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded px-4 py-2 mobile-menu-link">About</a>
-                <a href="#contact" class="text-2xl text-slate-700 hover:text-sky-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded px-4 py-2 mobile-menu-link">Contact</a>
+                <a href="#services" class="text-2xl text-slate-700 hover:text-sky-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500 rounded px-4 py-2 mobile-menu-link">Services</a>
+                <a href="#about" class="text-2xl text-slate-700 hover:text-sky-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500 rounded px-4 py-2 mobile-menu-link">About</a>
+                <a href="#contact" class="text-2xl text-slate-700 hover:text-sky-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500 rounded px-4 py-2 mobile-menu-link">Contact</a>
             </div>
         </div>
     </header>
+
+    <!-- Spacer to prevent content hiding behind fixed header (optional if needed) -->
+    <div class="h-20 md:h-24"></div>
 
     <!-- Main Content -->
     <main id="main">
@@ -202,7 +212,7 @@
             <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-5"></div>
             
             <div class="container mx-auto px-6 text-center text-white relative z-10">
-                <!-- ADDED CENTERED LOGO ABOVE HEADING -->
+                <!-- CENTERED LOGO ABOVE HEADING -->
                 <img src="https://raw.githubusercontent.com/codewithPrasiddha/1001267125-ONTARIO-INC./main/assets/logo.png" alt="1001267125 Ontario Inc. logo" class="mx-auto mb-6 h-96 w-auto" loading="eager" decoding="async">
 
                 <h1 class="text-4xl md:text-6xl font-bold mb-5 text-shadow">
@@ -532,52 +542,52 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const hamburger = document.querySelector('.hamburger');
         const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+        const mobileCloseButton = document.getElementById('mobile-close-button');
 
         // Toggle mobile menu
-        function toggleMobileMenu() {
+        function toggleMobileMenu(forceState) {
             const isOpen = mobileMenu.classList.contains('active');
-            
-            if (isOpen) {
-                mobileMenu.classList.remove('active');
-                hamburger.classList.remove('active');
-                mobileMenuButton.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = 'auto'; // Re-enable scrolling
-            } else {
+            const shouldOpen = typeof forceState === 'boolean' ? forceState : !isOpen;
+
+            if (shouldOpen) {
                 mobileMenu.classList.add('active');
                 hamburger.classList.add('active');
                 mobileMenuButton.setAttribute('aria-expanded', 'true');
-                document.body.style.overflow = 'hidden'; // Disable scrolling when menu is open
+                mobileMenu.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                // Focus the close button for accessibility
+                setTimeout(() => mobileCloseButton && mobileCloseButton.focus(), 0);
+            } else {
+                mobileMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenu.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = 'auto';
+                // Return focus to hamburger
+                setTimeout(() => mobileMenuButton && mobileMenuButton.focus(), 0);
             }
         }
 
         // Event listeners
-        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        mobileMenuButton.addEventListener('click', () => toggleMobileMenu());
+        mobileCloseButton.addEventListener('click', () => toggleMobileMenu(false));
 
         // Close menu when clicking on links
         mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                toggleMobileMenu();
-            });
-        });
-
-        // Close menu when clicking outside (on the menu overlay)
-        mobileMenu.addEventListener('click', (e) => {
-            if (e.target === mobileMenu) {
-                toggleMobileMenu();
-            }
+            link.addEventListener('click', () => toggleMobileMenu(false));
         });
 
         // Close menu on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-                toggleMobileMenu();
+                toggleMobileMenu(false);
             }
         });
 
         // Close menu on window resize to desktop size
         window.addEventListener('resize', () => {
             if (window.innerWidth >= 768 && mobileMenu.classList.contains('active')) {
-                toggleMobileMenu();
+                toggleMobileMenu(false);
             }
         });
 
@@ -587,10 +597,7 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
@@ -667,13 +674,12 @@
                 }, 100);
                 
                 // Optional: Pause video when not in viewport to save bandwidth
-                // Only observe after initial play attempt
                 setTimeout(() => {
                     const observer = new IntersectionObserver((entries) => {
                         entries.forEach(entry => {
-                            if (hasPlayedOnce) { // Only control playback after initial play
+                            if (hasPlayedOnce) {
                                 if (entry.isIntersecting) {
-                                    video.play().catch(() => {}); // Silent fail
+                                    video.play().catch(() => {});
                                 } else {
                                     video.pause();
                                 }
@@ -681,14 +687,12 @@
                         });
                     }, { threshold: 0.1 });
                     observer.observe(video);
-                }, 1000); // Wait 1 second before starting intersection observer
+                }, 1000);
             }
         });
         
-        // Parallax effect for hero (respect reduced motion preference)
-        function handleParallax() {
-            // Removed parallax for video background
-        }
+        // Parallax effect for hero (removed for video background)
+        function handleParallax() { /* no-op */ }
 
         window.addEventListener('scroll', () => {
             if (!ticking) {
