@@ -72,6 +72,33 @@
                 z-index: -1;
             }
             
+            /* Mobile menu animation */
+            .mobile-menu {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+            }
+            
+            .mobile-menu.active {
+                transform: translateX(0);
+            }
+            
+            /* Hamburger animation */
+            .hamburger-line {
+                transition: all 0.3s ease-in-out;
+            }
+            
+            .hamburger.active .hamburger-line:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .hamburger.active .hamburger-line:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active .hamburger-line:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+            
             @media (prefers-reduced-motion: reduce) {
                 .animate-float,
                 .parallax-hero {
@@ -82,6 +109,10 @@
                 }
                 .video-bg {
                     display: none;
+                }
+                .mobile-menu,
+                .hamburger-line {
+                    transition: none;
                 }
             }
         }
@@ -110,23 +141,43 @@
     <!-- Skip to content -->
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-sky-600 text-white px-4 py-2 rounded z-50">Skip to content</a>
     
-    <!-- Navigation - REDUCED HEIGHT FROM py-4 TO py-2 -->
-    <header class="fixed top-0 w-full z-40 bg-white/95 supports-backdrop:bg-white/90 backdrop-blur-sm border-b border-slate-200 shadow-sm" id="navbar">
+    <!-- Navigation - Semi-transparent with hamburger menu -->
+    <header class="fixed top-0 w-full z-40 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm" id="navbar">
         <nav class="container mx-auto px-6" role="navigation" aria-label="Main navigation">
-            <div class="flex items-center justify-between">
-                <!-- LOGO REMAINS SAME SIZE (h-20) -->
+            <div class="flex items-center justify-between py-2">
+                <!-- LOGO -->
                 <a href="#" class="flex items-center gap-3" aria-label="1001267125 Ontario Inc. home">
                     <img src="https://raw.githubusercontent.com/codewithPrasiddha/1001267125-ONTARIO-INC./main/assets/logo.png" alt="1001267125 Ontario Inc. logo" class="h-20 w-auto" loading="eager" decoding="async">
                     <span class="sr-only">1001267125 ONTARIO INC.</span>
                 </a>
-                <!-- MENU ITEMS REMAIN SAME SIZE -->
+                
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
                     <a href="#services" class="text-slate-700 hover:text-sky-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded px-2 py-1">Services</a>
                     <a href="#about" class="text-slate-700 hover:text-sky-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded px-2 py-1">About</a>
                     <a href="#contact" class="text-slate-700 hover:text-sky-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded px-2 py-1">Contact</a>
                 </div>
+                
+                <!-- Mobile Hamburger Button -->
+                <button class="md:hidden hamburger flex flex-col space-y-1.5 p-2 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded" 
+                        id="mobile-menu-button" 
+                        aria-label="Toggle mobile menu" 
+                        aria-expanded="false">
+                    <span class="hamburger-line w-6 h-0.5 bg-slate-700"></span>
+                    <span class="hamburger-line w-6 h-0.5 bg-slate-700"></span>
+                    <span class="hamburger-line w-6 h-0.5 bg-slate-700"></span>
+                </button>
             </div>
         </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden mobile-menu fixed top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-md z-30" id="mobile-menu">
+            <div class="flex flex-col items-center justify-center h-full space-y-8">
+                <a href="#services" class="text-2xl text-slate-700 hover:text-sky-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded px-4 py-2 mobile-menu-link">Services</a>
+                <a href="#about" class="text-2xl text-slate-700 hover:text-sky-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded px-4 py-2 mobile-menu-link">About</a>
+                <a href="#contact" class="text-2xl text-slate-700 hover:text-sky-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 rounded px-4 py-2 mobile-menu-link">Contact</a>
+            </div>
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -161,7 +212,7 @@
                     Ontario, Canada
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="mailto:info@example.com?subject=Quote%20Request&body=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20steel%20products.%20Please%20contact%20me%20at%20your%20earliest%20convenience." 
+                    <a href="mailto:zahoorsalman03@gmail.com?subject=Quote%20Request&body=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20steel%20products.%20Please%20contact%20me%20at%20your%20earliest%20convenience." 
                        class="bg-sky-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 min-w-48">
                         Get a Quote
                     </a>
@@ -172,12 +223,7 @@
                 </div>
             </div>
             
-            <!-- Scroll indicator -->
-            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-                </svg>
-            </div>
+
         </section>
 
         <!-- Wave Separator -->
@@ -481,9 +527,59 @@
     </footer>
 
     <script>
-        // AOS disabled
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
 
-        // Navbar fixed white (no scroll effect)
+        // Toggle mobile menu
+        function toggleMobileMenu() {
+            const isOpen = mobileMenu.classList.contains('active');
+            
+            if (isOpen) {
+                mobileMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            } else {
+                mobileMenu.classList.add('active');
+                hamburger.classList.add('active');
+                mobileMenuButton.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden'; // Disable scrolling when menu is open
+            }
+        }
+
+        // Event listeners
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+        // Close menu when clicking on links
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                toggleMobileMenu();
+            });
+        });
+
+        // Close menu when clicking outside (on the menu overlay)
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                toggleMobileMenu();
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                toggleMobileMenu();
+            }
+        });
+
+        // Close menu on window resize to desktop size
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768 && mobileMenu.classList.contains('active')) {
+                toggleMobileMenu();
+            }
+        });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
